@@ -4,11 +4,15 @@ public class MyMain {
     // Write a method that asks the user to input a double between 0.0 and 1000000.0
     // Your method should keep asking them until they type in a valid value
     // The method returns the final double they type in
-
     // scan.nextDouble() might be useful here
     public static double inputDouble() {
         Scanner scan = new Scanner(System.in);
-        // REPLACE THIS WITH YOUR CODE
+        System.out.println("give me a double");
+        double input = scan.nextDouble();
+        while (input < 0.0 || input >1000000.0){
+            System.out.println("give me another double");
+            input = scan.nextDouble();
+        }
 
         return -1.0;
     }
@@ -17,16 +21,24 @@ public class MyMain {
     // can return in change
     // You should use a while loop!
     public static int numQuarters(double money) {
-        // REPLACE THIS WITH YOUR CODE
-        return 0;
+        int quarter = 0;
+        while(money >=.25){
+            money = money- .25;
+            quarter ++;
+        }
+        return quarter;
     }
 
     // Takes a double money as input and returns the number of dimes that we
     // can return in change
     // You should use a while loop!
     public static int numDimes(double money) {
-        // REPLACE THIS WITH YOUR CODE
-        return 0;
+        int dimes = 0;
+        while (money >= 0.1){
+            money = money - 0.1;
+            dimes ++;
+        }
+        return dimes;
     }
 
 
